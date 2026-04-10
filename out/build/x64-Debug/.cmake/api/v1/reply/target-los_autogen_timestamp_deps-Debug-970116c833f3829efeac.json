@@ -1,0 +1,38 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/slae_solver/los/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "csr_tools::@3bc8bbd3dd2941cfb99a"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "gauss::@ebe0898108997eff9e00"
+		}
+	],
+	"id" : "los_autogen_timestamp_deps::@cd14183f93433be892e0",
+	"isGeneratorProvided" : true,
+	"name" : "los_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "src/slae_solver/los",
+		"source" : "src/slae_solver/los"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,27 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/slae_solver/gauss/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"id" : "gauss_autogen_timestamp_deps::@ebe0898108997eff9e00",
+	"isGeneratorProvided" : true,
+	"name" : "gauss_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "src/slae_solver/gauss",
+		"source" : "src/slae_solver/gauss"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,42 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/side_heating/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "csr_tools::@3bc8bbd3dd2941cfb99a"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "triangle_fem_tools::@ba98d9f2942ed9a7b4aa"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "los::@cd14183f93433be892e0"
+		}
+	],
+	"id" : "side_heating_autogen_timestamp_deps::@e3b4caf7229e47df98aa",
+	"isGeneratorProvided" : true,
+	"name" : "side_heating_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "src/side_heating",
+		"source" : "src/side_heating"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

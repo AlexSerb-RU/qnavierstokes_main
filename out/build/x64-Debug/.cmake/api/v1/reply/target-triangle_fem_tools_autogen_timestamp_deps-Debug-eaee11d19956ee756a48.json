@@ -1,0 +1,27 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/fem_tools/triangle_fem_tools/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"id" : "triangle_fem_tools_autogen_timestamp_deps::@ba98d9f2942ed9a7b4aa",
+	"isGeneratorProvided" : true,
+	"name" : "triangle_fem_tools_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "src/fem_tools/triangle_fem_tools",
+		"source" : "src/fem_tools/triangle_fem_tools"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,40 @@
+# Additional clean files
+cmake_minimum_required(VERSION 3.16)
+
+if("${CONFIG}" STREQUAL "" OR "${CONFIG}" STREQUAL "Debug")
+  file(REMOVE_RECURSE
+  "src\\app\\CMakeFiles\\qnavierstokes_autogen.dir\\AutogenUsed.txt"
+  "src\\app\\CMakeFiles\\qnavierstokes_autogen.dir\\ParseCache.txt"
+  "src\\app\\qnavierstokes_autogen"
+  "src\\bottom_heating\\CMakeFiles\\bottom_heating_autogen.dir\\AutogenUsed.txt"
+  "src\\bottom_heating\\CMakeFiles\\bottom_heating_autogen.dir\\ParseCache.txt"
+  "src\\bottom_heating\\bottom_heating_autogen"
+  "src\\color_scale\\CMakeFiles\\color_scale_autogen.dir\\AutogenUsed.txt"
+  "src\\color_scale\\CMakeFiles\\color_scale_autogen.dir\\ParseCache.txt"
+  "src\\color_scale\\color_scale_autogen"
+  "src\\fem_tools\\triangle_fem_tools\\CMakeFiles\\triangle_fem_tools_autogen.dir\\AutogenUsed.txt"
+  "src\\fem_tools\\triangle_fem_tools\\CMakeFiles\\triangle_fem_tools_autogen.dir\\ParseCache.txt"
+  "src\\fem_tools\\triangle_fem_tools\\triangle_fem_tools_autogen"
+  "src\\help\\CMakeFiles\\reference_autogen.dir\\AutogenUsed.txt"
+  "src\\help\\CMakeFiles\\reference_autogen.dir\\ParseCache.txt"
+  "src\\help\\reference_autogen"
+  "src\\matrix_tools\\csr_tools\\CMakeFiles\\csr_tools_autogen.dir\\AutogenUsed.txt"
+  "src\\matrix_tools\\csr_tools\\CMakeFiles\\csr_tools_autogen.dir\\ParseCache.txt"
+  "src\\matrix_tools\\csr_tools\\csr_tools_autogen"
+  "src\\opengl_painter\\CMakeFiles\\opengl_painter_autogen.dir\\AutogenUsed.txt"
+  "src\\opengl_painter\\CMakeFiles\\opengl_painter_autogen.dir\\ParseCache.txt"
+  "src\\opengl_painter\\opengl_painter_autogen"
+  "src\\settings\\CMakeFiles\\settings_autogen.dir\\AutogenUsed.txt"
+  "src\\settings\\CMakeFiles\\settings_autogen.dir\\ParseCache.txt"
+  "src\\settings\\settings_autogen"
+  "src\\side_heating\\CMakeFiles\\side_heating_autogen.dir\\AutogenUsed.txt"
+  "src\\side_heating\\CMakeFiles\\side_heating_autogen.dir\\ParseCache.txt"
+  "src\\side_heating\\side_heating_autogen"
+  "src\\slae_solver\\gauss\\CMakeFiles\\gauss_autogen.dir\\AutogenUsed.txt"
+  "src\\slae_solver\\gauss\\CMakeFiles\\gauss_autogen.dir\\ParseCache.txt"
+  "src\\slae_solver\\gauss\\gauss_autogen"
+  "src\\slae_solver\\los\\CMakeFiles\\los_autogen.dir\\AutogenUsed.txt"
+  "src\\slae_solver\\los\\CMakeFiles\\los_autogen.dir\\ParseCache.txt"
+  "src\\slae_solver\\los\\los_autogen"
+  )
+endif()

@@ -1,0 +1,54 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/app/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "bottom_heating::@f73b71a3614fb3449c13"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "color_scale::@95a7880d5650c0d61997"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "reference::@176e119b58c0ae782eca"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "opengl_painter::@0cde7792ddf8ceed9157"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "settings::@4a89bb85a6902de6040e"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "side_heating::@e3b4caf7229e47df98aa"
+		}
+	],
+	"id" : "qnavierstokes_autogen_timestamp_deps::@ff93792cf40911dae1b8",
+	"isGeneratorProvided" : true,
+	"name" : "qnavierstokes_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "src/app",
+		"source" : "src/app"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

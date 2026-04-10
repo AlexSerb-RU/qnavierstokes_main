@@ -1,0 +1,581 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						6,
+						7,
+						9,
+						10,
+						11,
+						12
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "src/app",
+					"jsonFile" : "directory-src.app-Debug-de77eec203e76141027b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/app",
+					"targetIndexes" : 
+					[
+						18,
+						19,
+						20
+					]
+				},
+				{
+					"build" : "src/bottom_heating",
+					"jsonFile" : "directory-src.bottom_heating-Debug-2a9db4a32c7daebe1cc9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/bottom_heating",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				},
+				{
+					"build" : "src/color_scale",
+					"jsonFile" : "directory-src.color_scale-Debug-d27874ce58646a136c36.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/color_scale",
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						5
+					]
+				},
+				{
+					"build" : "src/fem_tools",
+					"childIndexes" : 
+					[
+						5
+					],
+					"jsonFile" : "directory-src.fem_tools-Debug-c5314f3c8218b4335339.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/fem_tools"
+				},
+				{
+					"build" : "src/fem_tools/triangle_fem_tools",
+					"jsonFile" : "directory-src.fem_tools.triangle_fem_tools-Debug-60102f3e376ac171e871.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/fem_tools/triangle_fem_tools",
+					"targetIndexes" : 
+					[
+						31,
+						32,
+						33
+					]
+				},
+				{
+					"build" : "src/help",
+					"jsonFile" : "directory-src.help-Debug-e8391e84408618bbd4d2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/help",
+					"targetIndexes" : 
+					[
+						21,
+						22,
+						23,
+						24
+					]
+				},
+				{
+					"build" : "src/matrix_tools",
+					"childIndexes" : 
+					[
+						8
+					],
+					"jsonFile" : "directory-src.matrix_tools-Debug-6bc4b2d4fe6f39b2ac6f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/matrix_tools"
+				},
+				{
+					"build" : "src/matrix_tools/csr_tools",
+					"jsonFile" : "directory-src.matrix_tools.csr_tools-Debug-58437330864ee1de45f4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 0,
+					"source" : "src/matrix_tools/csr_tools",
+					"targetIndexes" : 
+					[
+						6,
+						7,
+						8
+					]
+				},
+				{
+					"build" : "src/opengl_painter",
+					"jsonFile" : "directory-src.opengl_painter-Debug-c0d08e2adfc3ae2d528f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/opengl_painter",
+					"targetIndexes" : 
+					[
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "src/settings",
+					"jsonFile" : "directory-src.settings-Debug-74d3003826b48ca35d75.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/settings",
+					"targetIndexes" : 
+					[
+						25,
+						26,
+						27
+					]
+				},
+				{
+					"build" : "src/side_heating",
+					"jsonFile" : "directory-src.side_heating-Debug-f5a7547b9fa0cc27bbe8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/side_heating",
+					"targetIndexes" : 
+					[
+						28,
+						29,
+						30
+					]
+				},
+				{
+					"build" : "src/slae_solver",
+					"childIndexes" : 
+					[
+						13,
+						14
+					],
+					"jsonFile" : "directory-src.slae_solver-Debug-4a00ad1ca76b22be6413.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/slae_solver"
+				},
+				{
+					"build" : "src/slae_solver/los",
+					"jsonFile" : "directory-src.slae_solver.los-Debug-d8b63b35b512f732ba0b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 12,
+					"projectIndex" : 0,
+					"source" : "src/slae_solver/los",
+					"targetIndexes" : 
+					[
+						12,
+						13,
+						14
+					]
+				},
+				{
+					"build" : "src/slae_solver/gauss",
+					"jsonFile" : "directory-src.slae_solver.gauss-Debug-cad73c8c7ea80503898c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 12,
+					"projectIndex" : 0,
+					"source" : "src/slae_solver/gauss",
+					"targetIndexes" : 
+					[
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14
+					],
+					"name" : "qnavierstokes",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "bottom_heating::@f73b71a3614fb3449c13",
+					"jsonFile" : "target-bottom_heating-Debug-d70abc3910d035a218ec.json",
+					"name" : "bottom_heating",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "bottom_heating_autogen::@f73b71a3614fb3449c13",
+					"jsonFile" : "target-bottom_heating_autogen-Debug-1f7374e7884fd07f7eb4.json",
+					"name" : "bottom_heating_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "bottom_heating_autogen_timestamp_deps::@f73b71a3614fb3449c13",
+					"jsonFile" : "target-bottom_heating_autogen_timestamp_deps-Debug-bafe082cfe716b109500.json",
+					"name" : "bottom_heating_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "color_scale::@95a7880d5650c0d61997",
+					"jsonFile" : "target-color_scale-Debug-cfffb85c3ecef38e8628.json",
+					"name" : "color_scale",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "color_scale_autogen::@95a7880d5650c0d61997",
+					"jsonFile" : "target-color_scale_autogen-Debug-5beba312569d467ee4e5.json",
+					"name" : "color_scale_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "color_scale_autogen_timestamp_deps::@95a7880d5650c0d61997",
+					"jsonFile" : "target-color_scale_autogen_timestamp_deps-Debug-9fdcf7de6d55abc771cb.json",
+					"name" : "color_scale_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "csr_tools::@3bc8bbd3dd2941cfb99a",
+					"jsonFile" : "target-csr_tools-Debug-555e3118a7cc3af09b5a.json",
+					"name" : "csr_tools",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "csr_tools_autogen::@3bc8bbd3dd2941cfb99a",
+					"jsonFile" : "target-csr_tools_autogen-Debug-6b29fdda004de1fc02fe.json",
+					"name" : "csr_tools_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "csr_tools_autogen_timestamp_deps::@3bc8bbd3dd2941cfb99a",
+					"jsonFile" : "target-csr_tools_autogen_timestamp_deps-Debug-ec02baa026e8ea4bc42c.json",
+					"name" : "csr_tools_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "gauss::@ebe0898108997eff9e00",
+					"jsonFile" : "target-gauss-Debug-efcd3798e63a9e5555c9.json",
+					"name" : "gauss",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "gauss_autogen::@ebe0898108997eff9e00",
+					"jsonFile" : "target-gauss_autogen-Debug-d8e8843e3000a91b9e42.json",
+					"name" : "gauss_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "gauss_autogen_timestamp_deps::@ebe0898108997eff9e00",
+					"jsonFile" : "target-gauss_autogen_timestamp_deps-Debug-70e387c430f7f52d49a3.json",
+					"name" : "gauss_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "los::@cd14183f93433be892e0",
+					"jsonFile" : "target-los-Debug-e8f1aea53143a1da2985.json",
+					"name" : "los",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "los_autogen::@cd14183f93433be892e0",
+					"jsonFile" : "target-los_autogen-Debug-dd8de20c689b3a68f4c9.json",
+					"name" : "los_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "los_autogen_timestamp_deps::@cd14183f93433be892e0",
+					"jsonFile" : "target-los_autogen_timestamp_deps-Debug-970116c833f3829efeac.json",
+					"name" : "los_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "opengl_painter::@0cde7792ddf8ceed9157",
+					"jsonFile" : "target-opengl_painter-Debug-6d874c389e57ff81c760.json",
+					"name" : "opengl_painter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "opengl_painter_autogen::@0cde7792ddf8ceed9157",
+					"jsonFile" : "target-opengl_painter_autogen-Debug-65bde556b1605dfd679b.json",
+					"name" : "opengl_painter_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "opengl_painter_autogen_timestamp_deps::@0cde7792ddf8ceed9157",
+					"jsonFile" : "target-opengl_painter_autogen_timestamp_deps-Debug-05b2c7a21671fe292da0.json",
+					"name" : "opengl_painter_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qnavierstokes::@ff93792cf40911dae1b8",
+					"jsonFile" : "target-qnavierstokes-Debug-1d5c75d451fddeae2d4c.json",
+					"name" : "qnavierstokes",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qnavierstokes_autogen::@ff93792cf40911dae1b8",
+					"jsonFile" : "target-qnavierstokes_autogen-Debug-01260fd14a12bce58607.json",
+					"name" : "qnavierstokes_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "qnavierstokes_autogen_timestamp_deps::@ff93792cf40911dae1b8",
+					"jsonFile" : "target-qnavierstokes_autogen_timestamp_deps-Debug-7a549a72e2be25f6ce10.json",
+					"name" : "qnavierstokes_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "reference::@176e119b58c0ae782eca",
+					"jsonFile" : "target-reference-Debug-12b2eb43d86666b53684.json",
+					"name" : "reference",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "reference_autogen::@176e119b58c0ae782eca",
+					"jsonFile" : "target-reference_autogen-Debug-5164cba7a730cfd5a061.json",
+					"name" : "reference_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "reference_autogen_timestamp_deps::@176e119b58c0ae782eca",
+					"jsonFile" : "target-reference_autogen_timestamp_deps-Debug-89359885b0bb98fff501.json",
+					"name" : "reference_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "reference_content::@176e119b58c0ae782eca",
+					"jsonFile" : "target-reference_content-Debug-17aed2f1d2047116f7df.json",
+					"name" : "reference_content",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "settings::@4a89bb85a6902de6040e",
+					"jsonFile" : "target-settings-Debug-16745afb2240b9417409.json",
+					"name" : "settings",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "settings_autogen::@4a89bb85a6902de6040e",
+					"jsonFile" : "target-settings_autogen-Debug-600cf0e0d6cb63ffe671.json",
+					"name" : "settings_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "settings_autogen_timestamp_deps::@4a89bb85a6902de6040e",
+					"jsonFile" : "target-settings_autogen_timestamp_deps-Debug-355ca39e1adb50fc4411.json",
+					"name" : "settings_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "side_heating::@e3b4caf7229e47df98aa",
+					"jsonFile" : "target-side_heating-Debug-3f1a638803472b503192.json",
+					"name" : "side_heating",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "side_heating_autogen::@e3b4caf7229e47df98aa",
+					"jsonFile" : "target-side_heating_autogen-Debug-bb508a1c6d4359ae76be.json",
+					"name" : "side_heating_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "side_heating_autogen_timestamp_deps::@e3b4caf7229e47df98aa",
+					"jsonFile" : "target-side_heating_autogen_timestamp_deps-Debug-38467ab861d9e5b595a3.json",
+					"name" : "side_heating_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "triangle_fem_tools::@ba98d9f2942ed9a7b4aa",
+					"jsonFile" : "target-triangle_fem_tools-Debug-a3c1fa4dbcc350d54258.json",
+					"name" : "triangle_fem_tools",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "triangle_fem_tools_autogen::@ba98d9f2942ed9a7b4aa",
+					"jsonFile" : "target-triangle_fem_tools_autogen-Debug-8dc7713d908ffec61ddb.json",
+					"name" : "triangle_fem_tools_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "triangle_fem_tools_autogen_timestamp_deps::@ba98d9f2942ed9a7b4aa",
+					"jsonFile" : "target-triangle_fem_tools_autogen_timestamp_deps-Debug-eaee11d19956ee756a48.json",
+					"name" : "triangle_fem_tools_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug",
+		"source" : "C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

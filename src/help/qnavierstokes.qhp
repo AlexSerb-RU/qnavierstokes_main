@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+    <namespace>amilab</namespace>
+    <virtualFolder>doc</virtualFolder>
+    <filterSection>
+        <toc>
+            <section title="Тестовая задача ЕГК" ref="content/index.htm">
+                <section title="Работа с программой" ref="content/work.htm"></section>
+                <section title="Настройка программы" ref="content/settings.htm"></section>
+                <section title="Внутренние форматы данных" ref="content/formats.htm"></section>
+                <section title="О программе" ref="content/about.htm"></section>
+            </section>
+        </toc>
+        <keywords>
+            <!--keyword name="Insert rectangle" ref="./insertrectangle.html"/>
+            <keyword name="Insert ellipse" ref="./insertellipse.html"/>
+            <keyword name="Delete object" ref="./deleteobject.html"/-->
+        </keywords>
+        <files>
+            <file>content/index.htm</file>
+            <file>content/about.htm</file>
+            <file>content/formats.htm</file>
+            <file>content/settings.htm</file>
+            <file>content/work.htm</file>
+            <file>content/img1.jpg</file>
+            <file>content/img2.jpg</file>
+            <file>content/img3.jpg</file>
+            <file>content/img4.jpg</file>
+            <file>content/img5.jpg</file>
+            <file>content/img6.jpg</file>
+            <file>content/img7.jpg</file>
+            <file>content/img8.jpg</file>
+            <file>content/img9.jpg</file>
+            <file>content/img10.jpg</file>
+            <file>content/img11.jpg</file>
+            <file>content/img12.jpg</file>
+            <file>content/img13.jpg</file>
+            <file>content/img14.jpg</file>
+            <file>content/img15.jpg</file>
+            <file>content/img16.jpg</file>
+            <file>content/img17.jpg</file>
+        </files>
+    </filterSection>
+</QtHelpProject>

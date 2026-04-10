@@ -1,0 +1,27 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/settings/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"id" : "settings_autogen_timestamp_deps::@4a89bb85a6902de6040e",
+	"isGeneratorProvided" : true,
+	"name" : "settings_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "src/settings",
+		"source" : "src/settings"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

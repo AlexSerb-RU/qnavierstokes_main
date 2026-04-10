@@ -1,0 +1,34 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/color_scale/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "settings::@4a89bb85a6902de6040e"
+		}
+	],
+	"id" : "color_scale_autogen_timestamp_deps::@95a7880d5650c0d61997",
+	"isGeneratorProvided" : true,
+	"name" : "color_scale_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "src/color_scale",
+		"source" : "src/color_scale"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

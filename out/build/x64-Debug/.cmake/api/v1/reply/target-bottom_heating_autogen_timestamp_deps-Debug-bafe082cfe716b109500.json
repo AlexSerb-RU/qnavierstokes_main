@@ -1,0 +1,27 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/bottom_heating/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"id" : "bottom_heating_autogen_timestamp_deps::@f73b71a3614fb3449c13",
+	"isGeneratorProvided" : true,
+	"name" : "bottom_heating_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "src/bottom_heating",
+		"source" : "src/bottom_heating"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

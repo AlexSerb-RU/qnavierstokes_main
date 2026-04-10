@@ -1,0 +1,21 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug/cmake_install.cmake",
+		"C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug/src/app/cmake_install.cmake",
+		"C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug/src/bottom_heating/cmake_install.cmake",
+		"C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug/src/color_scale/cmake_install.cmake",
+		"C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug/src/fem_tools/cmake_install.cmake",
+		"C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug/src/fem_tools/triangle_fem_tools/cmake_install.cmake",
+		"C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug/src/help/cmake_install.cmake",
+		"C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug/src/matrix_tools/cmake_install.cmake",
+		"C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug/src/matrix_tools/csr_tools/cmake_install.cmake",
+		"C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug/src/opengl_painter/cmake_install.cmake",
+		"C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug/src/settings/cmake_install.cmake",
+		"C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug/src/side_heating/cmake_install.cmake",
+		"C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug/src/slae_solver/cmake_install.cmake",
+		"C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug/src/slae_solver/los/cmake_install.cmake",
+		"C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug/src/slae_solver/gauss/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

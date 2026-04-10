@@ -1,0 +1,38 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/opengl_painter/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "color_scale::@95a7880d5650c0d61997"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "settings::@4a89bb85a6902de6040e"
+		}
+	],
+	"id" : "opengl_painter_autogen_timestamp_deps::@0cde7792ddf8ceed9157",
+	"isGeneratorProvided" : true,
+	"name" : "opengl_painter_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "src/opengl_painter",
+		"source" : "src/opengl_painter"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "src/fem_tools/triangle_fem_tools",
+		"source" : "src/fem_tools/triangle_fem_tools"
+	}
+}

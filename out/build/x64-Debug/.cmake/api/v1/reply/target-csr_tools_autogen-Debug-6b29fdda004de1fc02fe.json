@@ -1,0 +1,71 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/matrix_tools/csr_tools/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "csr_tools_autogen_timestamp_deps::@3bc8bbd3dd2941cfb99a"
+		}
+	],
+	"id" : "csr_tools_autogen::@3bc8bbd3dd2941cfb99a",
+	"isGeneratorProvided" : true,
+	"name" : "csr_tools_autogen",
+	"paths" : 
+	{
+		"build" : "src/matrix_tools/csr_tools",
+		"source" : "src/matrix_tools/csr_tools"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug/src/matrix_tools/csr_tools/CMakeFiles/csr_tools_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug/src/matrix_tools/csr_tools/CMakeFiles/csr_tools_autogen.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug/src/matrix_tools/csr_tools/csr_tools_autogen/timestamp.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

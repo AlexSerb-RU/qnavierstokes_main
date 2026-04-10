@@ -1,0 +1,27 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/matrix_tools/csr_tools/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"id" : "csr_tools_autogen_timestamp_deps::@3bc8bbd3dd2941cfb99a",
+	"isGeneratorProvided" : true,
+	"name" : "csr_tools_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "src/matrix_tools/csr_tools",
+		"source" : "src/matrix_tools/csr_tools"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,71 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/fem_tools/triangle_fem_tools/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "triangle_fem_tools_autogen_timestamp_deps::@ba98d9f2942ed9a7b4aa"
+		}
+	],
+	"id" : "triangle_fem_tools_autogen::@ba98d9f2942ed9a7b4aa",
+	"isGeneratorProvided" : true,
+	"name" : "triangle_fem_tools_autogen",
+	"paths" : 
+	{
+		"build" : "src/fem_tools/triangle_fem_tools",
+		"source" : "src/fem_tools/triangle_fem_tools"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug/src/fem_tools/triangle_fem_tools/CMakeFiles/triangle_fem_tools_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug/src/fem_tools/triangle_fem_tools/CMakeFiles/triangle_fem_tools_autogen.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug/src/fem_tools/triangle_fem_tools/triangle_fem_tools_autogen/timestamp.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}
