@@ -3,6 +3,8 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QFileInfoList>
+#include <QImage>
+#include <QPainter>
 #include <QMessageBox>
 #include <QRegularExpression>
 #include <QSignalBlocker>
@@ -111,6 +113,34 @@ void MainWindow::setControlsEnabled(bool enabled)
 {
     ui->startButton->setEnabled(enabled);
     ui->settingsAction->setEnabled(enabled);
+}
+
+void MainWindow::savePaintAimImage(PaintAim aim, const QString &filename)
+{
+    glPainter->setPaintAim(aim);
+    glPainter->repaint();
+    qApp->processEvents();
+
+    const qreal dpr = glPainter->devicePixelRatioF();
+    QImage image(qRound(glPainter->width() * dpr), qRound(glPainter->height() * dpr), QImage::Format_ARGB32);
+    image.setDevicePixelRatio(dpr);
+    image.fill(Qt::white);
+
+    QPainter painter(&image);
+    glPainter->render(&painter);
+    painter.end();
+
+    image.save(filename, "PNG");
+}
+
+void MainWindow::saveAllResultImages()
+{
+    const QString resultDir = qApp->applicationDirPath() + "/result/";
+    savePaintAimImage(T, resultDir + "T.png");
+    savePaintAimImage(Psi, resultDir + "Psi.png");
+    savePaintAimImage(Omega, resultDir + "Omega.png");
+    savePaintAimImage(Vx, resultDir + "Vx.png");
+    savePaintAimImage(Vy, resultDir + "Vy.png");
 }
 
 QString MainWindow::batchSpecFilePath() const
@@ -388,6 +418,10 @@ void MainWindow::onSolverFinished()
 {
     glPainter->processData();
     glPainter->setPaintAim(T);
+    if (QFile::exists(batchSpecFilePath())) {
+        saveAllResultImages();
+        glPainter->setPaintAim(T);
+    }
     copyResultFilesToUniqueFolder();
 
     if (batchModeActive && currentBatchIndex + 1 < batchQueue.size()) {
@@ -559,23 +593,26 @@ void MainWindow::on_saveImageButton_clicked()
 {
     const auto settings = SettingsManager::instance().settings();
     if (settings.paintEngine == PaintEngine::OpenGL) {
-        const QPixmap glPixmap = glPainter->grab();
         QString filename = qApp->applicationDirPath() + "/result/";
 
         if (ui->paintTButton->isChecked()) {
             filename += "T.png";
+            savePaintAimImage(T, filename);
         } else if (ui->paintPsiButton->isChecked()) {
             filename += "Psi.png";
+            savePaintAimImage(Psi, filename);
         } else if (ui->paintOmegaButton->isChecked()) {
             filename += "Omega.png";
+            savePaintAimImage(Omega, filename);
         } else if (ui->paintVxButton->isChecked()) {
             filename += "Vx.png";
+            savePaintAimImage(Vx, filename);
         } else if (ui->paintVyButton->isChecked()) {
             filename += "Vy.png";
+            savePaintAimImage(Vy, filename);
         } else {
             filename += "unknown.png";
+            savePaintAimImage(NotDefine, filename);
         }
-
-        glPixmap.save(filename, "PNG");
     }
 }

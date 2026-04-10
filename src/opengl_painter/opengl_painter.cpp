@@ -2,15 +2,57 @@
 #include <QColor>
 #include <QFile>
 #include <QMessageBox>
+#include <QPainter>
 #include <QTextStream>
 #include <QVector>
 #include <QtMath>
+#include <QLocale>
 
 #include <QOpenGLFunctions>
 
 #include "opengl_painter.hpp"
 #include "../color_scale/color_scale.hpp"
 #include "../settings/settings_manager.hpp"
+
+namespace {
+constexpr int kLeftMarginPx = 52;
+constexpr int kRightMarginPx = 12;
+constexpr int kBottomMarginPx = 34;
+constexpr int kTopMarginPx = 12;
+constexpr int kTickLengthPx = 6;
+constexpr int kTickLabelGapPx = 3;
+
+double axisTickStep(double axisMax)
+{
+    if (axisMax <= 0.0) {
+        return 0.1;
+    }
+    return axisMax / 10.0;
+}
+
+QString tickLabel(double value)
+{
+    const double rounded = std::round(value * 10.0) / 10.0;
+    const bool isInteger = std::abs(rounded - std::round(rounded)) < 1e-9;
+    return QLocale::system().toString(rounded, 'f', isInteger ? 0 : 1);
+}
+
+int xToPixel(const QRectF &plotRect, double x, double xMax)
+{
+    if (xMax <= 0.0) {
+        return qRound(plotRect.left());
+    }
+    return qRound(plotRect.left() + (x / xMax) * plotRect.width());
+}
+
+int yToPixel(const QRectF &plotRect, double y, double yMax)
+{
+    if (yMax <= 0.0) {
+        return qRound(plotRect.bottom());
+    }
+    return qRound(plotRect.bottom() - (y / yMax) * plotRect.height());
+}
+}
 
 OpenGLPainter::OpenGLPainter(QWidget *parent)
     : QOpenGLWidget(parent)
@@ -30,26 +72,70 @@ void OpenGLPainter::resizeGL(int w, int h)
     glViewport(0, 0, w, h);
 }
 
-void OpenGLPainter::drawCoordinateTicks(double xMax, double yMax, double viewSize)
+QRectF OpenGLPainter::computePlotRectPixels(double xMax, double yMax) const
 {
-    const QColor color(Qt::black);
-    glColor3f(color.redF(), color.greenF(), color.blueF());
+    const double safeXMax = qMax(xMax, 1e-6);
+    const double safeYMax = qMax(yMax, 1e-6);
 
-    const double tickLength = qMax(viewSize * 0.015, 0.01);
-    const double eps = 1e-9;
+    const double availableWidth = qMax(width() - kLeftMarginPx - kRightMarginPx, 10);
+    const double availableHeight = qMax(height() - kTopMarginPx - kBottomMarginPx, 10);
 
-    glBegin(GL_LINES);
-    for (double x = 0.0; x <= xMax + eps; x += 0.1) {
+    const double domainAspect = safeXMax / safeYMax;
+    const double availableAspect = availableWidth / availableHeight;
+
+    double plotWidth = availableWidth;
+    double plotHeight = availableHeight;
+
+    if (domainAspect > availableAspect) {
+        plotHeight = plotWidth / domainAspect;
+    } else {
+        plotWidth = plotHeight * domainAspect;
+    }
+
+    const double left = kLeftMarginPx + (availableWidth - plotWidth) * 0.5;
+    const double top = kTopMarginPx + (availableHeight - plotHeight) * 0.5;
+    return QRectF(left, top, plotWidth, plotHeight);
+}
+
+void OpenGLPainter::drawCoordinateTicks(double xMax, double yMax, const QRectF &plotRect)
+{
+    QPainter painter(this);
+    painter.setRenderHint(QPainter::Antialiasing, false);
+    painter.setRenderHint(QPainter::TextAntialiasing, true);
+    painter.setPen(QPen(Qt::black, 1.0));
+
+    const int left = qRound(plotRect.left());
+    const int right = qRound(plotRect.right());
+    const int top = qRound(plotRect.top());
+    const int bottom = qRound(plotRect.bottom());
+
+    painter.drawRect(QRectF(plotRect.left(), plotRect.top(), plotRect.width(), plotRect.height()));
+
+    const double xStep = axisTickStep(xMax);
+    const double xEps = xStep * 0.5;
+    for (double x = 0.0; x <= xMax + xEps; x += xStep) {
         const double clampedX = qMin(x, xMax);
-        glVertex2f(clampedX, 0.0);
-        glVertex2f(clampedX, qMin(tickLength, yMax));
+        const int px = xToPixel(plotRect, clampedX, xMax);
+        painter.drawLine(px, bottom + 1, px, bottom + kTickLengthPx);
+        painter.drawLine(px, top - 1, px, top - kTickLengthPx);
+
+        const QString label = tickLabel(clampedX);
+        const QRect textRect(px - 24, bottom + kTickLengthPx + kTickLabelGapPx, 48, 16);
+        painter.drawText(textRect, Qt::AlignHCenter | Qt::AlignTop, label);
     }
-    for (double y = 0.0; y <= yMax + eps; y += 0.1) {
+
+    const double yStep = axisTickStep(yMax);
+    const double yEps = yStep * 0.5;
+    for (double y = 0.0; y <= yMax + yEps; y += yStep) {
         const double clampedY = qMin(y, yMax);
-        glVertex2f(0.0, clampedY);
-        glVertex2f(qMin(tickLength, xMax), clampedY);
+        const int py = yToPixel(plotRect, clampedY, yMax);
+        painter.drawLine(left - kTickLengthPx, py, left - 1, py);
+        painter.drawLine(right + 1, py, right + kTickLengthPx, py);
+
+        const QString label = tickLabel(clampedY);
+        const QRect textRect(0, py - 8, left - kTickLengthPx - kTickLabelGapPx, 16);
+        painter.drawText(textRect, Qt::AlignRight | Qt::AlignVCenter, label);
     }
-    glEnd();
 }
 
 void OpenGLPainter::paintGlFile(const QString &filepath)
@@ -57,7 +143,7 @@ void OpenGLPainter::paintGlFile(const QString &filepath)
     if (!QFile(filepath).exists()) {
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
-        glOrtho(0, 600, 0, 600, -1, 1);
+        glOrtho(0, 1, 0, 1, -1, 1);
         return;
     }
 
@@ -80,10 +166,17 @@ void OpenGLPainter::paintGlFile(const QString &filepath)
 
     iostream >> xMax >> yMax;
 
-    const double viewSize = qMax(xMax, yMax);
+    const QRectF plotRect = computePlotRectPixels(xMax, yMax);
+    const qreal dpr = devicePixelRatioF();
+    glViewport(
+        qRound(plotRect.left() * dpr),
+        qRound((height() - plotRect.bottom()) * dpr),
+        qRound(plotRect.width() * dpr),
+        qRound(plotRect.height() * dpr));
+
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho(0, viewSize, 0, viewSize, -1, 1);
+    glOrtho(0, qMax(xMax, 1e-6), 0, qMax(yMax, 1e-6), -1, 1);
 
     iostream >> numOfTriangles;
     glBegin(GL_TRIANGLES);
@@ -125,9 +218,10 @@ void OpenGLPainter::paintGlFile(const QString &filepath)
     glEnd();
     glLineWidth(1);
 
-    drawCoordinateTicks(xMax, yMax, viewSize);
-
     file.close();
+    glFinish();
+
+    drawCoordinateTicks(xMax, yMax, plotRect);
 }
 
 void OpenGLPainter::paintGL()
@@ -258,6 +352,7 @@ void OpenGLPainter::processDataFile(const QString &filepath)
             tr("Невозможно найти файл\n\"") + qApp->applicationDirPath() + "/result/nvtr.dat" +
                 tr("\"\nили\n\"") + qApp->applicationDirPath() + "/result/net.dat" +
                 tr("\"\nДальнейшая обработка данных невозможна!"));
+
         return;
     }
 
@@ -281,15 +376,15 @@ void OpenGLPainter::processDataFile(const QString &filepath)
     QFile ofile(filepath.left(filepath.size() - 4) + ".gl");
     QTextStream ostream(&ofile);
     ofile.open(QIODevice::WriteOnly);
+
     ostream << maxX << " " << maxY << Qt::endl;
     ostream << nvtr.size() << Qt::endl;
-
     for (int i = 0; i < nvtr.size(); ++i) {
         for (int localNode = 0; localNode < 3; ++localNode) {
             const int nodeIndex = static_cast<int>(nvtr[i][localNode]);
             const QColor color = colorScale.getColor(f[nodeIndex]);
-            ostream << xy[nodeIndex][0] << " " << xy[nodeIndex][1] << " "
-                    << color.red() << " " << color.green() << " " << color.blue() << Qt::endl;
+            ostream << xy[nodeIndex][0] << " " << xy[nodeIndex][1] << " " << color.red() << " "
+                    << color.green() << " " << color.blue() << Qt::endl;
         }
     }
 
@@ -320,6 +415,7 @@ void OpenGLPainter::processDataFile(const QString &filepath)
                     l = 2;
                 }
             }
+
             if (l == 2) {
                 ostream << x[0] << " " << y[0] << " " << x[1] << " " << y[1] << Qt::endl;
             }

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QOpenGLWidget>
+#include <QRectF>
 
 #include "../app/paint_aim.hpp"
 #include "color_scale.hpp"
@@ -24,7 +25,8 @@ protected:
 private:
     void processDataFile(const QString &filepath);
     void paintGlFile(const QString &filepath);
-    void drawCoordinateTicks(double xMax, double yMax, double viewSize);
+    QRectF computePlotRectPixels(double xMax, double yMax) const;
+    void drawCoordinateTicks(double xMax, double yMax, const QRectF &plotRect);
 
 private:
     PaintAim paintAim = NotDefine;

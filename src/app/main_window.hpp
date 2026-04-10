@@ -54,6 +54,8 @@ private:
     };
 
     void clearRootResultFiles();
+    void savePaintAimImage(PaintAim aim, const QString &filename);
+    void saveAllResultImages();
     void setControlsEnabled(bool enabled);
     void launchCurrentRun();
     void startNextBatchRun();

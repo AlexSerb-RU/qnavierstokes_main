@@ -159,6 +159,7 @@ C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/sr
  mmc:Q_OBJECT
  mdp:C:/Qt6/6.8.3/msvc2022_64/include/QtCore/QList
  mdp:C:/Qt6/6.8.3/msvc2022_64/include/QtCore/QMutex
+ mdp:C:/Qt6/6.8.3/msvc2022_64/include/QtCore/QRectF
  mdp:C:/Qt6/6.8.3/msvc2022_64/include/QtCore/QScopedPointer
  mdp:C:/Qt6/6.8.3/msvc2022_64/include/QtCore/QString
  mdp:C:/Qt6/6.8.3/msvc2022_64/include/QtCore/QThread

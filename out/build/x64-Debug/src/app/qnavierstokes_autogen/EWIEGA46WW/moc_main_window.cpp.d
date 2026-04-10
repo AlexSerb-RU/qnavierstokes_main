@@ -1,6 +1,7 @@
 C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/out/build/x64-Debug/src/app/qnavierstokes_autogen/EWIEGA46WW/moc_main_window.cpp: C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/src/app/main_window.hpp \
   C:/Qt6/6.8.3/msvc2022_64/include/QtCore/QList \
   C:/Qt6/6.8.3/msvc2022_64/include/QtCore/QMutex \
+  C:/Qt6/6.8.3/msvc2022_64/include/QtCore/QRectF \
   C:/Qt6/6.8.3/msvc2022_64/include/QtCore/QScopedPointer \
   C:/Qt6/6.8.3/msvc2022_64/include/QtCore/QString \
   C:/Qt6/6.8.3/msvc2022_64/include/QtCore/QThread \
