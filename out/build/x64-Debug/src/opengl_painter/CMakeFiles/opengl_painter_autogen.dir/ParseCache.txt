@@ -125,6 +125,7 @@ C:/Users/user/Desktop/RoflScripts/qnavierstokes-1.5.0a1/qnavierstokes-1.5.0a1/sr
  mdp:C:/Qt6/6.8.3/msvc2022_64/include/QtCore/qxptype_traits.h
  mdp:C:/Qt6/6.8.3/msvc2022_64/include/QtCore/qyieldcpu.h
  mdp:C:/Qt6/6.8.3/msvc2022_64/include/QtGui/QColor
+ mdp:C:/Qt6/6.8.3/msvc2022_64/include/QtGui/QImage
  mdp:C:/Qt6/6.8.3/msvc2022_64/include/QtGui/QSurfaceFormat
  mdp:C:/Qt6/6.8.3/msvc2022_64/include/QtGui/qaction.h
  mdp:C:/Qt6/6.8.3/msvc2022_64/include/QtGui/qbitmap.h

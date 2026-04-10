@@ -121,15 +121,7 @@ void MainWindow::savePaintAimImage(PaintAim aim, const QString &filename)
     glPainter->repaint();
     qApp->processEvents();
 
-    const qreal dpr = glPainter->devicePixelRatioF();
-    QImage image(qRound(glPainter->width() * dpr), qRound(glPainter->height() * dpr), QImage::Format_ARGB32);
-    image.setDevicePixelRatio(dpr);
-    image.fill(Qt::white);
-
-    QPainter painter(&image);
-    glPainter->render(&painter);
-    painter.end();
-
+    const QImage image = glPainter->exportCurrentImage();
     image.save(filename, "PNG");
 }
 

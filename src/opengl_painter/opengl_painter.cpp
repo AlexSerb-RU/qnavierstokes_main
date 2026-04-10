@@ -72,13 +72,13 @@ void OpenGLPainter::resizeGL(int w, int h)
     glViewport(0, 0, w, h);
 }
 
-QRectF OpenGLPainter::computePlotRectPixels(double xMax, double yMax) const
+QRectF OpenGLPainter::computePlotRectPixels(int targetWidth, int targetHeight, double xMax, double yMax) const
 {
     const double safeXMax = qMax(xMax, 1e-6);
     const double safeYMax = qMax(yMax, 1e-6);
 
-    const double availableWidth = qMax(width() - kLeftMarginPx - kRightMarginPx, 10);
-    const double availableHeight = qMax(height() - kTopMarginPx - kBottomMarginPx, 10);
+    const double availableWidth = qMax(targetWidth - kLeftMarginPx - kRightMarginPx, 10);
+    const double availableHeight = qMax(targetHeight - kTopMarginPx - kBottomMarginPx, 10);
 
     const double domainAspect = safeXMax / safeYMax;
     const double availableAspect = availableWidth / availableHeight;
@@ -97,9 +97,13 @@ QRectF OpenGLPainter::computePlotRectPixels(double xMax, double yMax) const
     return QRectF(left, top, plotWidth, plotHeight);
 }
 
-void OpenGLPainter::drawCoordinateTicks(double xMax, double yMax, const QRectF &plotRect)
+QRectF OpenGLPainter::computePlotRectPixels(double xMax, double yMax) const
 {
-    QPainter painter(this);
+    return computePlotRectPixels(width(), height(), xMax, yMax);
+}
+
+void OpenGLPainter::paintCoordinateTicks(QPainter &painter, double xMax, double yMax, const QRectF &plotRect) const
+{
     painter.setRenderHint(QPainter::Antialiasing, false);
     painter.setRenderHint(QPainter::TextAntialiasing, true);
     painter.setPen(QPen(Qt::black, 1.0));
@@ -138,9 +142,23 @@ void OpenGLPainter::drawCoordinateTicks(double xMax, double yMax, const QRectF &
     }
 }
 
+void OpenGLPainter::drawCoordinateTicks(double xMax, double yMax, const QRectF &plotRect)
+{
+    QPainter painter(this);
+    paintCoordinateTicks(painter, xMax, yMax, plotRect);
+}
+
+QImage OpenGLPainter::exportCurrentImage( ) const
+{
+   return const_cast<OpenGLPainter *>(this)->grab( ).toImage( );
+}
+
 void OpenGLPainter::paintGlFile(const QString &filepath)
 {
     if (!QFile(filepath).exists()) {
+        hasCurrentDomain = false;
+        currentXMax = 1.0;
+        currentYMax = 1.0;
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
         glOrtho(0, 1, 0, 1, -1, 1);
@@ -165,6 +183,10 @@ void OpenGLPainter::paintGlFile(const QString &filepath)
     file.open(QIODevice::ReadOnly);
 
     iostream >> xMax >> yMax;
+
+    currentXMax = qMax(xMax, 1.0);
+    currentYMax = qMax(yMax, 1.0);
+    hasCurrentDomain = true;
 
     const QRectF plotRect = computePlotRectPixels(xMax, yMax);
     const qreal dpr = devicePixelRatioF();
